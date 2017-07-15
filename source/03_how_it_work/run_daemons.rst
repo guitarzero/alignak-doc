@@ -20,7 +20,7 @@ All the Alignak daemons have a script that can be launched with command line par
 
 All the command line parameters are optional because default values are used by the daemon when it starts but it is recommended to use, at least, a daemon configuration file with the `-c` option.
 
-Without a configuration file, the daemon will create ist pid file in the current working directory.
+Without a configuration file, the daemon will create its pid file in the current working directory.
 
 Other command line parameters are available, but they are use rarely ;)
 
@@ -137,7 +137,7 @@ The `_launch_daemon.sh` script has several command line parameters that may be i
         -n (--no-daemon)   start requested daemon in console mode (do not daemonize)
         -a (--arbiter)     start requested daemon in arbiter mode
                            This option adds the monitoring configuration file(s) on the command line
-                           This option will raise an error if the the daemon is not an arbiter.
+                           This option will raise an error if the daemon is not an arbiter.
         -V (--verify)      start requested daemon in verify mode (only for the arbiter)
                            This option will raise an error if the the daemon is not an arbiter.
 
@@ -280,10 +280,10 @@ This file is structured as an Ini file:
 Alignak processes list
 ======================
 
-The daemons involved in Alignak are strating several processes in the system. All the processes started have a process title set by Alignak to help the user knowing which is which. Several processes types are present in the system processes list:
+The daemons involved in Alignak are starting several processes in the system. All the processes started have a process title set by Alignak to help the user knowing which is which. Several processes types are present in the system processes list:
 
     * the main daemon process
-        There will alwys be one process for each Alignak daemon type. The process title is the daemon type (eg. *alignak-arbiter*, *alignak-scheduler*,...)
+        There will always be one process for each Alignak daemon type. The process title is the daemon type (eg. *alignak-arbiter*, *alignak-scheduler*,...)
 
     * the main daemon forked process.
         Each Alignak daemon forks a new process instance for each daemon instance existing in the configuration. If you defined several schedulers you will get a process for each scheduler instance. Each daemon instance process has a title built with the instance name (eg. *alignak-scheduler scheduler-master*)
